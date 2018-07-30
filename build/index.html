@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>uCoz</title><link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrap">
+      <aside class="aside">
+        <ul class="aside-list">
+          <li class="aside-item"><a class="aside-item__link" href="#about">О себе</a><a class="aside-item__link" href="#form">Форма</a><a class="aside-item__link" href="#tooltip">Всплывающая подсказка</a><a class="aside-item__link" href="#load">Индикатор Загрузки</a><a class="aside-item__link" href="#wishlist">Вишлист</a></li>
+        </ul>
+      </aside>
+      <div class="main">
+        <div class="main-item" id="about">
+          <h2 class="main-title">О себе</h2>
+          <div class="about">
+            <div class="about-left">
+              <div class="about-left__avatar"><img class="about-left__img" src="images/content/33.jpg" alt=""></div>
+              <div class="social">
+                <ul class="social__list">
+                  <li class="social__item"><a class="social__link social__link_vk" href="https://vk.com/id138408890" target="_blank">
+                      <svg class="social__link_svg" width="100%" height="100%">
+                        <use xlink:href="images/icons/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="social__link social__link_skype" href="kostya807740" target="_blank">
+                      <svg class="social__link_svg" width="100%" height="100%">
+                        <use xlink:href="images/icons/sprite.svg#skype"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="social__link social__link_phone" href="89811215823" target="_blank">
+                      <svg class="social__link_svg" width="100%" height="100%">
+                        <use xlink:href="images/icons/sprite.svg#phone"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="about-right">
+              <p class="text">Мой опыт - 8 месяцев работы помощником главного фронтенд-разработчика в студии, где разрабатывались проекты различной сложности. После этого я активно занялся обучением и прошел 2 курса по веб-разработке в онлайн школе LoftSchool. Также разрабатывал сайты на фрилансе. Поэтому общий опыт больше 1 года.</p>
+              <div class="work">
+                <h2 class="main-subtitle">Примеры работ:</h2>
+                <ul class="work-list">
+                  <li class="work-item"><a class="work-link" href="http://nimamed.ru/'" target="_blank">Сайт пансионата Северная Охта</a><img class="work-link__img" src="images/content/earth.png" alt="Ссылка"/></li>
+                  <li class="work-item"><a class="work-link" href="http://granexpro.ru/" target="_blank">Сайт компании Гранэкспро</a><img class="work-link__img" src="images/content/earth.png" alt="Ссылка"/></li>
+                  <li class="work-item"><a class="work-link" href="https://kostyapoymenov.github.io/burgers/index" target="_blank">Сайт магазина бургеров</a><img class="work-link__img" src="images/content/earth.png" alt="Ссылка"/></li>
+                  <li class="work-item"><a class="work-link" href="http://infobim.ru/" target="_blank">Сайт компании infoBIM</a><img class="work-link__img" src="images/content/earth.png" alt="Ссылка"/></li>
+                  <li class="work-item"><a class="work-link" href="http://tihodom.ru/" target="_blank">Сайт компании Тиходом</a><img class="work-link__img" src="images/content/earth.png" alt="Ссылка"/></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-item" id="form">
+          <h2 class="main-title">Форма                                  </h2>
+          <form class="form">
+            <div class="form-title">Регистрация</div>
+            <div class="form-top">
+              <div class="form-social">
+                <div class="form-social__item"><a class="form-social__link form-social__link--vk" href="#">Регистрация из Вконтакте</a></div>
+                <div class="form-social__item"><a class="form-social__link form-social__link--fb" href="#">Регистрация из Facebook</a></div>
+                <div class="form-social__item"><a class="form-social__link form-social__link--google" href="#">Регистрация из Google Plus</a></div>
+                <div class="form-social__item"><a class="form-social__link form-social__link--yandex" href="#">Регистрация из <span class="color-red">Яндекс</span></a></div>
+              </div>
+              <div class="form-more">
+                <bottun class="form-more__btn" type="button">Другие</bottun>
+              </div>
+            </div>
+            <div class="form-bottom">
+              <div class="form-bottom__sub">или</div>
+              <div class="form-block">
+                <input class="form-block__input" type="text" placeholder="Ваш логин или E-mail">
+                <input class="form-block__input" type="text" placeholder="Пароль">
+              </div>
+              <label class="form-label form-label--check" for="checkPay">
+                <div class="form-label__item">
+                  <input class="form-label__input--select" id="checkPay" type="checkbox" name="form-call" value="Запомнить меня">
+                  <div class="form-label__input-my"></div>
+                  <div class="form-label__title">Не перезванивать</div>
+                </div>
+                <div class="form-label__item"><a class="form-label__link form-label__link--blue" href="#">Забыли пароль?</a></div>
+              </label>
+              <div class="form-block">
+                <button class="btn" type="submit">Зарегистрироваться</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="main-item" id="tooltip">
+          <h2 class="main-title">Всплывающая подсказка</h2>
+          <div class="tooltip-block">
+            <p class="text">4 класса, которые изменяют положение тултипа: .tooltip--bottom, .tooltip--top, .tooltip--left, .tooltip--right. Классы нужно добавлять к блоку с классом .tooltip</p>
+            <div class="tooltip-block__item">
+              <button class="tooltip-btn">Войти в систему</button>
+              <div class="tooltip tooltip--bottom">Чтобы войти в систему кликните на кнопку</div>
+            </div>
+          </div>
+        </div>
+        <div class="main-item" id="load">
+          <h2 class="main-title">Индикатор загрузки</h2>
+          <div class="block-load">
+            <div class="block-load__item">
+              <div class="loader"></div>
+              <div class="loader-min"></div>
+            </div>
+          </div>
+        </div>
+        <div class="main-item" id="wishlist">
+          <h2 class="main-title">Вишлист</h2>
+          <div class="wishlist" id="app">
+            <form class="wishlist-form" v-on:submit.prevent="addNewTodo">
+              <label class="wishlist-append__label" for="new-todo">
+                <input class="wishlist-form__input" v-model="newTodoText" id="new-todo" placeholder="Например, бегать">
+                <button class="wishlist-item__btn wishlist-item__btn--blue">Добавить</button>
+              </label>
+            </form>
+            <ul class="wishlist-list">
+              <li class="wishlist-item" is="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title" v-on:remove="todos.splice(index, 1)"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hamburger"><a class="hamburger__link"><span class="hamburger__link_item"></span></a></div>
+    <div class="hamburger-menu">
+      <nav class="hamburger-menu__nav">
+        <ul class="hamburger-menu__list">
+          <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#about">О себе</a></li>
+          <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#form">Форма</a></li>
+          <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#tooltip">Всплывающая подсказка</a></li>
+          <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#load">Индикатор Загрузки</a></li>
+          <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#wishlist">Вишлист</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

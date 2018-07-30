@@ -1,0 +1,31 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content
+  }
+}
+
+@mixin phones-xs {
+  @media screen and (max-width: $phones-xs) {
+    @content
+  }
+}
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}

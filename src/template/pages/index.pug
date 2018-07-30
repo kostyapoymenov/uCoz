@@ -1,0 +1,105 @@
+extends ../loyout
+
+mixin work(link,title)
+        li.work-item
+            a.work-link(href=link target="_blank")=title
+            img.work-link__img(src="images/content/earth.png" alt="Ссылка")
+            
+block variables
+    - var title= "uCoz"
+
+block content
+        .main-wrap
+            aside.aside
+                ul.aside-list
+                    li.aside-item
+                        a.aside-item__link(href="#about") О себе
+                        a.aside-item__link(href="#form") Форма
+                        a.aside-item__link(href="#tooltip") Всплывающая подсказка
+                        a.aside-item__link(href="#load") Индикатор Загрузки
+                        a.aside-item__link(href="#wishlist") Вишлист
+            .main
+                .main-item#about
+                    h2.main-title О себе
+                    .about
+                        .about-left
+                            .about-left__avatar
+                                img.about-left__img(src="images/content/33.jpg" alt="")
+                            .social
+                                - 
+                                    var socials = [
+                                    ['vk', 'https://vk.com/id138408890'],
+                                    ['skype', 'kostya807740'],
+                                    ['phone', '89811215823']
+                                    ]
+
+                                ul.social__list
+                                    each social in socials
+                                        li.social__item
+                                            a(class=`social__link social__link_${social[0]}` href=`${social[1]}` target="_blank")
+                                                svg.social__link_svg(width='100%' height='100%')
+                                                    use(xlink:href=`images/icons/sprite.svg#${social[0]}`)
+                        .about-right
+                            p.text Мой опыт - 8 месяцев работы помощником главного фронтенд-разработчика в студии, где разрабатывались проекты различной сложности. После этого я активно занялся обучением и прошел 2 курса по веб-разработке в онлайн школе LoftSchool. Также разрабатывал сайты на фрилансе. Поэтому общий опыт больше 1 года.
+                            .work
+                                h2.main-subtitle Примеры работ:
+                                ul.work-list
+                                    +work("http://nimamed.ru/'", "Сайт пансионата Северная Охта")
+                                    +work("http://granexpro.ru/","Сайт компании Гранэкспро")
+                                    +work("https://kostyapoymenov.github.io/burgers/index","Сайт магазина бургеров")
+                                    +work("http://infobim.ru/","Сайт компании infoBIM")
+                                    +work("http://tihodom.ru/","Сайт компании Тиходом")
+                .main-item#form
+                    h2.main-title Форма                                  
+                    form.form
+                        .form-title Регистрация
+                        .form-top
+                            .form-social
+                                .form-social__item
+                                    a.form-social__link.form-social__link--vk(href="#") Регистрация из Вконтакте
+                                .form-social__item
+                                    a.form-social__link.form-social__link--fb(href="#") Регистрация из Facebook
+                                .form-social__item
+                                    a.form-social__link.form-social__link--google(href="#") Регистрация из Google Plus
+                                .form-social__item
+                                    a.form-social__link.form-social__link--yandex(href="#") Регистрация из 
+                                        span.color-red Яндекс
+                            .form-more
+                                bottun.form-more__btn(type="button") Другие
+                        .form-bottom
+                            .form-bottom__sub или
+                            .form-block
+                                input.form-block__input(type="text" placeholder="Ваш логин или E-mail")
+                                input.form-block__input(type="text" placeholder="Пароль")
+                            label.form-label.form-label--check(for="checkPay")
+                                .form-label__item
+                                    input#checkPay.form-label__input--select(type="checkbox" name="form-call" value="Запомнить меня")
+                                    .form-label__input-my
+                                    .form-label__title Не перезванивать
+                                .form-label__item
+                                    a.form-label__link.form-label__link--blue(href="#") Забыли пароль?
+                            .form-block
+                                button.btn(type="submit") Зарегистрироваться
+                .main-item#tooltip
+                    h2.main-title Всплывающая подсказка
+                    .tooltip-block
+                        p.text 4 класса, которые изменяют положение тултипа: .tooltip--bottom, .tooltip--top, .tooltip--left, .tooltip--right. Классы нужно добавлять к блоку с классом .tooltip
+                        .tooltip-block__item
+                            button.tooltip-btn Войти в систему
+                            .tooltip.tooltip--bottom Чтобы войти в систему кликните на кнопку
+                .main-item#load
+                    h2.main-title Индикатор загрузки
+                    .block-load
+                        .block-load__item
+                            .loader
+                            .loader-min
+                .main-item#wishlist
+                    h2.main-title Вишлист
+                    div.wishlist#app
+                        form.wishlist-form(v-on:submit.prevent="addNewTodo")
+                            label.wishlist-append__label(for="new-todo")
+                                input.wishlist-form__input(v-model="newTodoText"  id="new-todo" placeholder="Например, бегать")
+                                button.wishlist-item__btn.wishlist-item__btn--blue Добавить
+                        ul.wishlist-list
+                            li.wishlist-item(is="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title" v-on:remove="todos.splice(index, 1)")
+                        
