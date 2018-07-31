@@ -16,6 +16,27 @@ function acordeonSocial(){
 }
 acordeonSocial();
 
+function copyContact(contactBtn, contactLink) {
+ 
+    document.querySelector(contactBtn).addEventListener('click', function() {
+        
+        const el = document.createElement('textarea');
+        el.value = contactLink;
+        console.log(el.value);
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    });
+  
+}
+copyContact('.social-copy_phone', '+79811215823');
+copyContact('.social-copy_skype', 'kostya807740');
+copyContact('.social-copy_vk', 'https://vk.com/id138408890');
+
 function scroll(){
   var linkNav = document.querySelectorAll('[href^="#"]'),
     V = 0;

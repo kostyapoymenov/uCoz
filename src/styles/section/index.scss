@@ -98,6 +98,19 @@
   width: rem(40px);
 }
 
+.social-copy {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 500;
+  @include font-size(14px);
+  text-align: center;
+  color: #3c3b3b;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .about-right {
   width: 75%;
   padding: 0 rem(15px);
